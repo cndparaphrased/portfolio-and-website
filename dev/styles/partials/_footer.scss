@@ -1,0 +1,15 @@
+.footer__container {
+	height: 5rem;
+	padding-top: 1rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  opacity: 0;
+	animation: fadeInBottom ease-in 0.3s forwards;
+	z-index: -10;
+}
+

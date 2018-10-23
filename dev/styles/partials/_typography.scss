@@ -1,0 +1,40 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $main-font;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+h1, h2, h3, h6, p {
+  color: $black;
+  margin: 0;
+  padding: 0;
+  letter-spacing: .03rem;
+}
+
+h3 {
+ font-weight: 400;
+ font-size: 2.2rem;
+ text-transform: uppercase;
+}
+
+h6 {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.textblock {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.text--blue {
+  font-size: 2rem;
+  color: $blue;
+}

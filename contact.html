@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link type="image/png" href="assets/favicon.png" rel="icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Barlow+Semi+Condensed:400,500" rel="stylesheet">
+  <link rel="stylesheet" href="public/styles/style.css">
+  <title>Cindy Poon Yeung | Web Developer</title>
+</head>
+
+<body>
+  <!-- HEADER STARTS -->
+  <header>
+    <div class="wrapper">
+      <div class="header__container">
+        <div class="logo">
+          <a href="index.html" class="logo__index">
+            <h1>Cindy Poon Yeung</h1>
+          </a>
+        </div>
+        <nav>
+          <div class="mobileMenu">
+            <button class="mobileMenu__btn" aria-haspopup="true" aria-expanded="false" aria-controls="menu">
+              <span class="mobileMenu__bars type1AnimInit" aria-hidden="true"></span>
+              <span class="mobileMenu__bars type2AnimInit" aria-hidden="true"></span>
+              <span class="mobileMenu__bars type3AnimInit" aria-hidden="true"></span>
+            </button>
+          </div>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html">Profile</a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="portfolio.html">Portfolio</a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link menu__link--active" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER ENDS -->
+
+  <!-- MAIN STARTS -->
+  <main>
+    <div class="wrapper">
+      <section class="contact">
+        <div class="contactBg">
+          <img class="contactBg__img" src="assets/bracketLeft.png" alt="">
+        </div>
+
+        <div class="contactMain">
+          <div class="contactLeft">
+            <div class="contactImg__box">
+              <img src="assets/headshot.png" alt="Portrait of developer's smiling face" class="contactImg">
+            </div>
+            <div class="contact__textblock">
+              <p class="textblock">Hello! I am a <span class="text--blue">passionate</span> and meticulous Web Developer with a background in <span class="text--blue">creative</span> copy. With experience building responsive and <span class="text--blue">dynamic</span> applications and websites using the latest frameworks and languages, I look forward to all collaborations! Feel free to contact me if you need help turning any of your ideas into a reality!</p>
+            </div>
+          </div>
+  
+          <div class="contactRight">
+            <div class="contact__general">
+              <a href="mailto:cndpoon@gmail.com" class="contact__email">cndpoon@gmail.com</a>
+              
+              <ul class="social">
+                <li class="social__items social__items--email">
+                  <a href="mailto:cndpoon@gmail.com" class="social__link" aria-label="my email">
+                    <i aria-hidden class="far fa-envelope social__icon"></i>
+                  </a>
+                </li>
+
+                <li class="social__items">
+                  <a href="https://www.linkedin.com/in/cindy-poon-yeung-572858169" class="social__link" aria-label="my linkedIn profile" target="_blank">
+                    <i aria-hidden class="fab fa-linkedin-in social__icon"></i>
+                  </a>
+                </li>
+              
+                <li class="social__items">
+                  <a href="https://www.instagram.com/cndparaphrased" class="social__link" aria-label="my instagram page" target="_blank">
+                    <i aria-hidden class="fab fa-instagram social__icon"></i>
+                  </a>
+                </li>
+              
+                <li class="social__items">
+                  <a href="https://twitter.com/cndparaphrased" class="social__link" aria-label="my twitter page" target="_blank">
+                    <i aria-hidden class="fab fa-twitter social__icon"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <form action="http://www.focuspocus.io/magic/cndpoon@gmail.com" method="POST" class="contact__form">
+              <div class="form__userInfo">
+                <label for="name" class="visuallyhidden">Name</label>
+                <input type="text" id="name" name="name" class="form__name" placeholder="name">
+            
+                <label for="email" class="visuallyhidden">Email</label>
+                <input type="email" id="email" name="email" class="form__email" placeholder="e-mail" required="true">
+              </div>
+            
+              <textarea name="comments" class="form__textbox" cols="50" rows="5" placeholder="leave me a note" required="true"></textarea>
+            
+              <input type="submit" class="btn--form" value="send message">
+            </form>
+          </div> 
+        </div>
+
+
+        <div class="contactBg">
+          <img class="contactBg__img" src="assets/bracketRight.png" alt="">
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- MAIN ENDS -->
+
+  <!-- FOOTER STARTS -->
+  <footer>
+    <div class="wrapper">
+      <div class="footer__container">
+        <h6 class="copyright">ⓒ Cindy Poon Yeung 2018</h6>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER ENDS -->
+  <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+    crossorigin='anonymous'></script>
+  <script src="public/scripts/main.js"></script>
+</body>
+
+</html>

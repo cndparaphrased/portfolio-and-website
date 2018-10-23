@@ -1,0 +1,130 @@
+.contact {
+  height: 80vh;
+  display: flex;
+}
+
+.contactBg {
+  width: 10%;
+}
+
+.contactBg,
+.contactBg__img {
+  height: 100%;
+}
+
+.contactMain {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.contactLeft,
+.contactRight {
+  max-height: 80vh;
+  overflow: hidden;
+  width: 50%;
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactImg__box {
+  width: 50%;
+  margin-bottom: 1rem;
+  img {
+    border-radius: 50%;
+  }
+}
+
+.contact__textblock {
+  margin: 1rem 0 0 0;
+  .textblock {
+    margin: 0;
+  }
+}
+
+.contact__general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__email {
+  font-size: 2.8rem;
+}
+
+// = = = = = = = = = = = = = = = 
+// SOCIAL STYLES
+// = = = = = = = = = = = = = = = 
+.social {
+  display: flex;
+}
+
+.social__items {
+  text-align: center;
+  margin: 2rem;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $black;
+  border-radius: 50%;
+  background-color: $white;
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: $black;
+  }
+  &:hover > .social__link .social__icon {
+    color: $white;
+  }
+}
+
+.social__items--email {
+  display: none;
+}
+
+.social__icon {
+  font-size: 2rem;
+  color: $black;
+  transition: color 0.3s ease-in-out;
+}
+
+// = = = = = = = = = = = = = = = 
+// FORM STYLES
+// = = = = = = = = = = = = = = = 
+.form__name,
+.form__email,
+.form__textbox,
+.btn--form {
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+  background: none;
+  border: 2px solid $blue;
+  box-shadow: none;
+  letter-spacing: .1rem;
+  color: $black;
+  &:focus {
+    outline: none;
+  }
+}
+
+.form__textbox {
+  resize: none;
+}
+
+.btn--form {
+  font-weight: 500;
+  font-size: 2.4rem;
+  letter-spacing: .2rem;
+  text-transform: uppercase;
+  background: $blue;
+  color: $white;
+  transition: all .3s ease-in-out;
+  &:hover {
+    background: transparent;
+    color: $blue;
+  }
+}
