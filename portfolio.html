@@ -55,68 +55,92 @@
   <main>
     <!-- PORTFOLIO SECTION STARTS -->
     <section class="portfolio">
-      <div class="portfolio__description">
-        <div class="portfolio__bracket">
-          <img class="portfolio__bracketImg" src="assets/logoleft.png" alt="">
+      <!-- <div class="wrapper">
+        <div class="portfolio__description">
+          <div class="portfolio__bracket">
+            <img class="portfolio__bracketImg" src="assets/logoleft.png" alt="">
+          </div>
+          <p class="portfolio__intro">Here are just a few samples for you to browse. Feel free to click on any of them to run a live demo. All portfolio pieces are fully responsive and mobile-friendly.</p>
+          <div class="portfolio__bracket">
+            <img class="portfolio__bracketImg" src="assets/logoright.png" alt="">
+          </div>
         </div>
-        <p class="portfolio__intro">Here are just a few samples for you to browse. Feel free to click on any of them to run a live demo. All portfolio pieces are fully responsive and mobile friendly.</p>
-        <div class="portfolio__bracket">
-          <img class="portfolio__bracketImg" src="assets/logoright.png" alt="">
-        </div>
-      </div>
+      </div> -->
 
+      <button class="btn">
+        <svg width="40px" height="50px" viewBox="0 0 50 80" xml:space="preserve">
+          <polyline fill="none" stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" points="
+          45.63,75.8 0.375,38.087 45.63,0.375 " />
+        </svg>
+      </button>
       <!-- PORTFOLIO CAROUSEL STARTS -->
       <div class="carousel">
         <!-- PORTFOLIO PIECE ONE -->
-        <a class="portfolio__item" href="http://cndparaphrased.github.io/comedy-gif-app" target="_blank">
+        <div class="portfolio__item portfolio__item--active">
           <div class="box">
             <div class="box__shadow box__shadow--bottom box__shadow--left"></div>
-            <img class="portfolio__img" src="assets/portfolioComedy.png" alt="snapshot of Comedy Clapback GIF generator">
+            <a class="portfolio__link" href="http://cndparaphrased.github.io/comedy-gif-app" target="_blank">
+              <img class="portfolio__img" src="assets/portfolioComedy.png" alt="snapshot of Comedy Clapback GIF generator">
+            </a>
             <h3 class="portfolio__title portfolio__title--top portfolio__title--right">Comedy Clapback Tour</h3>
             <p class="portfolio__text portfolio__text--left portfolio__text--top">Javascript & jQuery</p>
             <p class="portfolio__content portfolio__content--right portfolio__content--top">Generates a random GIF based on user selections</p>
           </div>
-        </a>
+        </div>
+
 
         <!-- PORTFOLIO PIECE TWO -->
-        <a class="portfolio__item" href="https://mind-on-a-shelf.firebaseapp.com/" target="_blank">
-          <div class="box">
-            <div class="box__shadow box__shadow--bottom box__shadow--right"></div>
-            <img class="portfolio__img" src="assets/portfolioMind.png" alt="snapshot of Mind on a Shelf application">
-            <h3 class="portfolio__title portfolio__title--bottom portfolio__title--left">Mind on a Shelf</h3>
-            <p class="portfolio__text portfolio__text--bottom portfolio__text--right">React & Firebase</p>
-            <p class="portfolio__content portfolio__content--left">Input thoughts with the ability to retrieve and modify</p>
+          <div class="portfolio__item">
+            <div class="box">
+              <div class="box__shadow box__shadow--bottom box__shadow--right"></div>
+              <a class="portfolio__link" href="https://mind-on-a-shelf.firebaseapp.com/" target="_blank">
+                <img class="portfolio__img" src="assets/portfolioMind.png" alt="snapshot of Mind on a Shelf application">
+              </a>
+              <h3 class="portfolio__title portfolio__title--bottom portfolio__title--left">Mind on a Shelf</h3>
+              <p class="portfolio__text portfolio__text--bottom portfolio__text--right">React & Firebase</p>
+              <p class="portfolio__content portfolio__content--left">Input thoughts with the ability to retrieve and modify</p>
+            </div>
           </div>
-        </a>
 
         <!-- PORTFOLIO PIECE THREE -->
-        <a class="portfolio__item" href="https://moondollars-2dd28.firebaseapp.com/" target="_blank">
-          <div class="box">
-            <div class="box__shadow box__shadow--bottom box__shadow--left"></div>
-            <img class="portfolio__img portfolio__img--moon" src="assets/portfolioMoon.png" alt="snapshot of Moon Dollar Coffee application">
-            <h3 class="portfolio__title portfolio__title--top portfolio__title--right">Moon Dollar Cocktails</h3>
-            <p class="portfolio__text portfolio__text--top portfolio__text--left">React & APIs</p>
-            <p class="portfolio__content portfolio__content--top portfolio__content--right">Finds a cocktail that highlights client's coffee product</p>
+          <div class="portfolio__item">
+            <div class="box">
+              <div class="box__shadow box__shadow--bottom box__shadow--left"></div>
+              <a class="portfolio__link" href="https://moondollars-2dd28.firebaseapp.com/" target="_blank">
+                <img class="portfolio__img portfolio__img--moon" src="assets/portfolioMoon.png" alt="snapshot of Moon Dollar Coffee application">
+              </a>
+              <h3 class="portfolio__title portfolio__title--top portfolio__title--right">Moon Dollar Cocktails</h3>
+              <p class="portfolio__text portfolio__text--top portfolio__text--left">React & APIs</p>
+              <p class="portfolio__content portfolio__content--top portfolio__content--right">Finds a cocktail that highlights client's coffee product</p>
+            </div>
           </div>
-        </a>
 
         <!-- PORTFOLIO PIECE FOUR -->
-        <a class="portfolio__item" href="https://thebalancedrobot.github.io/cindy-rita_project4/" target="_blank">
-          <div class="box">
-            <div class="box__shadow box__shadow--bottom box__shadow--right"></div>
-            <img class="portfolio__img" src="assets/portfolioAdventure.png" alt="snapshot of Adventure Advisor web application">
-            <h3 class="portfolio__title portfolio__title--bottom portfolio__title--left">Adventure Advisor</h3>
-            <p class="portfolio__text portfolio__text--bottom portfolio__text--right">Javascript & APIs</p>
-            <p class="portfolio__content portfolio__content--bottom portfolio__content--left">Presents information on a randomized travel destination</p>
+          <div class="portfolio__item">
+            <div class="box">
+              <div class="box__shadow box__shadow--bottom box__shadow--right"></div>
+              <a class="portfolio__link" href="https://thebalancedrobot.github.io/cindy-rita_project4/" target="_blank">
+                <img class="portfolio__img" src="assets/portfolioAdventure.png" alt="snapshot of Adventure Advisor web application">
+              </a>
+              <h3 class="portfolio__title portfolio__title--bottom portfolio__title--left">Adventure Advisor</h3>
+              <p class="portfolio__text portfolio__text--bottom portfolio__text--right">Javascript & APIs</p>
+              <p class="portfolio__content portfolio__content--bottom portfolio__content--left">Presents information on a randomized travel destination</p>
+            </div>
           </div>
-        </a>
       </div>
       <!-- PORTFOLIO CAROUSEL ENDS -->
+      <button class="btn">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="50px" viewBox="0 0 50 80"
+          xml:space="preserve">
+          <polyline fill="none" stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" points="
+          0.375,0.375 45.63,38.087 0.375,75.8 " />
+        </svg>
+      </button>
 
     </section>
     <!-- PORTFOLIO SECTION ENDS -->
 
-    <section class="temporary">
+    <!-- <section class="temporary">
       <div class="portfolio__description">
         <div class="portfolio__bracket">
           <img class="portfolio__bracketImg" src="assets/logoleft.png" alt="">
@@ -127,7 +151,7 @@
         </div>
       </div>
     </section>
-  </main>
+  </main> -->
   <!-- MAIN ENDS -->
 
   <!-- FOOTER STARTS -->
@@ -141,8 +165,7 @@
   <!-- FOOTER ENDS -->
 
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
-    crossorigin='anonymous'></script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>  
+    crossorigin='anonymous'></script>  
   <script src="public/scripts/main.js"></script>
 
 </body>

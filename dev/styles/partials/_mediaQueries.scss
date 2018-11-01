@@ -219,11 +219,6 @@
     transform-origin: bottom;
     animation: shrinkDown 0.5s forwards;
   }
-
-  .grid--inactive {
-    transform-origin: bottom;
-    animation: growUp 0.5s forwards;
-  }
   
   .grid {
     grid-template-columns: repeat(5, calc(100% / 5));

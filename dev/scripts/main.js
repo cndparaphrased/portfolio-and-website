@@ -1,5 +1,6 @@
 $(function() {
 
+  // prevent scrolling on touch devices
   $(document.body).on('touchmove', function(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -7,22 +8,50 @@ $(function() {
 
   // on click of hamburger menu
   $('.mobileMenu').on('click', function() {
-    $('.grid').toggleClass('grid--active grid--inactive');
+    $('.grid').toggleClass('grid--active');
     $('.menu').toggleClass('menu--active');
     $('.menu__item').fadeToggle(300);
-    $('.mobileMenu__bars:nth-of-type(1)').toggleClass('type1AnimInit type1Anim');
-    $('.mobileMenu__bars:nth-of-type(2)').toggleClass('type2AnimInit type2Anim');
-    $('.mobileMenu__bars:nth-of-type(3)').toggleClass('type3AnimInit type3Anim');
+    if ($(window).width() <= 500) {
+      $('.mobileMenu__bars:nth-of-type(1)').toggleClass('type1AnimInit type1Anim500');
+      $('.mobileMenu__bars:nth-of-type(2)').toggleClass('type2AnimInit type2Anim');
+      $('.mobileMenu__bars:nth-of-type(3)').toggleClass('type3AnimInit type3Anim500');
+    } else {
+      $('.mobileMenu__bars:nth-of-type(1)').toggleClass('type1AnimInit type1Anim');
+      $('.mobileMenu__bars:nth-of-type(2)').toggleClass('type2AnimInit type2Anim');
+      $('.mobileMenu__bars:nth-of-type(3)').toggleClass('type3AnimInit type3Anim');
+    };
   });
 
-
-  // on click of each letter in profile grid
+  // on click of each letter in profile grid 
   $('.grid__cell .grid__link').on('click', function() {
     const currentCell = $($(this).attr('href'));
     const slideColor = $(currentCell).children('.slide__right').css('background-color');
-    document.styleSheets[2].cssRules[165].style.backgroundColor = slideColor;
+    document.styleSheets[2].cssRules[167].style.backgroundColor = slideColor;
 
-    // console.log(document.styleSheets[2].cssRules);
+
+    $('body').addClass('swipeAnimation swipeLtoR');
+
+    // remove classes on animation end
+    $('body').on('animationend', function () {
+      $('body').delay(100).queue(function() {
+        $('body').removeClass().dequeue();
+      });
+    });
+
+  });
+
+
+
+
+  // on click of each letter in profile grid
+  // $('.grid__cell .grid__link').on('click', function() {
+  //   const currentCell = $($(this).attr('href'));
+  //   const slideColor = $(currentCell).children('.slide__right').css('background-color');
+  //   document.styleSheets[2].cssRules[116].style.backgroundColor = slideColor;
+
+    // console.log('clicked');
+    console.log(document.styleSheets[2].cssRules);
+    console.log(document.styleSheets[2].cssRules[116].style.backgroundColor);
 
     // $('.profile').addClass('animShrinkX').delay(.5).queue(function() {
     //   $('body').addClass('swipeAnimation swipeLtoR');
@@ -46,29 +75,21 @@ $(function() {
     // $('footer').removeClass('fadeInIndex');
     // $('.grid').removeClass('fadeInIndex');
 
-    $(currentCell).css({
-      display: 'flex'
-    });
+    // $(currentCell).css({
+    //   display: 'flex'
+    // });
     
     
     // add animations to the correct slide
-    $('body').addClass('swipeAnimation swipeLtoR').delay(100).queue(function() {
-      $(currentCell).addClass('animGrowX').dequeue();
-
-    });
-
-    // remove classes on animation end
-    $('body').on('animationend', function () {
-      $('body').delay(100).queue(function() {
-        $('body').removeClass().dequeue();
-      });
-    });
+  //   $('body').addClass('swipeAnimation swipeLtoR');
 
 
 
 
 
-  }); // end function onClick of each letter in profile
+
+
+  // }); // end function onClick of each letter in profile
 
 
 

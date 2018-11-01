@@ -1,31 +1,55 @@
 .portfolio {
-  display: none;
-}
-
-// .portfolio {
-//   height: calc(90vh - 4rem);
-//   padding: 2rem 0;
-// }
-
-.portfolio__description {
+  height: calc(100vh - 10rem);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: justify;
 }
 
-.portfolio__bracket,
-.portfolio__bracketImg {
-  height: 100%;
+.carousel {
+  position: relative;
 }
 
 // .portfolio__item {
-//   width: 70%;
+//   display: none;
 // }
 
-// .carousel {
-//   height: 50vh;
+// .portfolio__item--active {
+//   position: absolute;
+//   height: calc(100vh - 10rem);
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 // }
+
+// .box {
+//   border: 1px solid red;
+// }
+
+// .box__shadow {
+// 	position: absolute;
+// 	width: 100%;
+//   height: 100%;
+//   border: 3px solid $blue;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // .portfolio {
 //   height: 90vh;
@@ -91,12 +115,12 @@
 //   }
 // }
 
-.portfolio__intro {
-  padding: 0 2rem;
-  text-transform: uppercase;
-  font-size: 4rem;
-  text-align: center;
-}
+// .portfolio__intro {
+//   padding: 0 2rem;
+//   text-transform: uppercase;
+//   font-size: 4rem;
+//   text-align: center;
+// }
 
 // // = = = = = = = = = = = = = = =
 // // INDIVIDUAL ITEM STYLES

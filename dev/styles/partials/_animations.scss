@@ -122,6 +122,38 @@
   }
 }
 
+.type1Anim500 {
+  animation:  moveDownRotateR500 .5s ease forwards;
+}
+
+.type3Anim500 {
+  animation: moveUpRotateR500 .5s ease forwards;
+}
+
+@keyframes moveDownRotateR500 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(9px) rotate(0);
+  }
+  100% {
+    transform: translateY(9px) rotate(45deg);
+  }
+}
+
+@keyframes moveUpRotateR500 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0);
+  }
+  100% {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
 // = = = = = = = = = = = = = = =
 // FOOTER
 // = = = = = = = = = = = = = = =
@@ -148,9 +180,10 @@
     top: 0;
     right: 0;
     height: 100%;
+    z-index: 10;
   }
   &::before {
-    background: #425358;
+    background: rgb(66, 83, 88);
   }
   &::after {
     background-color: $white;
@@ -287,7 +320,7 @@
 }
 
 .animGrowX {
-  // transform-origin: right;
+  transform-origin: right;
   animation: growX 0.3s forwards;
 }
 
@@ -326,3 +359,36 @@
     transform: scaleY(1);
   }
 }
+
+
+
+
+// = = = = = = = = = = = = = = = = = = = =
+// TESTING ENVIRONMENT
+// = = = = = = = = = = = = = = = = = = = =
+
+@keyframes openClose {
+  0% {
+    transform: translateX(0);
+  }
+  // 50% {
+  //   transform: scaleX(10);
+  // }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.testAnim {
+  // height: 100vh;
+  // width: 100%;
+  background: white;
+  animation: diamond 1.2s;
+  transform: scale(0) rotate(45deg);
+}
+
+    @keyframes diamond{
+      0%{transform:rotate(45deg) scale(0)}
+      50%{transform:rotate(45deg) scale(10)}
+      100%{transform:rotate(45deg) scale(0)}
+    }
