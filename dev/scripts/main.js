@@ -52,26 +52,26 @@ $(function() {
 
 
   // on click of center square
-  $('.ctrl__desktop--center').on('click', function() {
-    const thisSlide = $(this).parents('div').eq(3);
+  // $('.ctrl__desktop--center').on('click', function() {
+  //   const thisSlide = $(this).parents('div').eq(3);
     
-    // activates animation
-    $('body').addClass('swipeUpAnimation swipeUp');
+  //   // activates animation
+  //   $('body').addClass('swipeUpAnimation swipeUp');
 
-    // re-displays grid, header, and footer
-    $(thisSlide).addClass('animShrinkDown').fadeOut().delay(1000).queue(function() {
-      $(thisSlide).removeClass('animShrinkDown').dequeue();
-      $('header').css({display: 'block'});
-      $('footer').css({display: 'block'});
-      $('.profile').css({display: 'block'});
-    });
+  //   // re-displays grid, header, and footer
+  //   $(thisSlide).addClass('animShrinkDown').fadeOut().delay(1000).queue(function() {
+  //     $(thisSlide).removeClass('animShrinkDown').dequeue();
+  //     $('header').css({display: 'block'});
+  //     $('footer').css({display: 'block'});
+  //     $('.profile').css({display: 'block'});
+  //   });
 
-    // clears all animations on slides
-    $('.slide').removeClass('animGrowX');
+  //   // clears all animations on slides
+  //   $('.slide').removeClass().addClass('slide');
 
-    // re-displays profile
+  //   // re-displays profile
 
-  }); // end function onClick of center square
+  // }); // end function onClick of center square
 
 
 
@@ -91,6 +91,8 @@ $(function() {
     const currentSlideColor = $(currentSlide).children('.slide__right').css('background-color');
     document.styleSheets[2].cssRules[167].style.backgroundColor = currentSlideColor;
 
+    $('.slide').removeClass().addClass('slide');
+
     if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--right' && $(currentSlide).attr('id') === 'Z') {
       $('body').addClass('swipeAnimation swipeRtoL');
       $(currentSlide).fadeOut(900).delay(250).queue(function () {
@@ -104,7 +106,7 @@ $(function() {
       });
     } else if ($(this).attr('class') == 'btn ctrl__desktop--arrows ctrl__desktop--left' && $(currentSlide).attr('id') === 'A') {
       $('body').addClass('swipeAnimation swipeLtoR');
-      $(currentSlide).addClass('animShrinkXFromRight').fadeOut(1000).delay(250).queue(function () {
+      $(currentSlide).addClass('animShrinkXFromRight').fadeOut(1000).delay(300).queue(function () {
         $(currentSlide).siblings('#Z').addClass('animGrowXFromLeft').css({ display: 'flex' }).dequeue();
       });
     } else if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--left') {
