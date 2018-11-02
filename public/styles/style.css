@@ -1089,20 +1089,6 @@ nav {
   .swipeUpAnimation.swipeUp::after {
     animation: swipeUp .6s .6s 2 ease; }
 
-.fadeInAnimation {
-  animation: fadeIn 1s .5s ease-in forwards; }
-
-.fadeInIndex {
-  animation: fadeIn 1s 1.4s ease forwards; }
-
-@keyframes moveUp {
-  0% {
-    opacity: 0;
-    transform: translateY(25px); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-
 @keyframes swipeLtoR {
   0% {
     width: 0;
@@ -1136,21 +1122,29 @@ nav {
     height: 0;
     bottom: 100%; } }
 
-@keyframes fadeIn {
-  0% {
-    visibility: hidden;
-    opacity: 0; }
-  100% {
-    visibility: visible;
-    opacity: 1; } }
-
 .animShrinkX {
+  transform-origin: left;
+  animation: shrinkX 1.3s forwards; }
+
+.animShrinkXFromRight {
   transform-origin: right;
-  animation: shrinkX 0.3s forwards; }
+  animation: shrinkX 1.3s forwards; }
 
 .animGrowX {
   transform-origin: right;
   animation: growX 0.3s forwards; }
+
+.animGrowXFromLeft {
+  transform-origin: left;
+  animation: growX 0.3s forwards; }
+
+.animShrinkDown {
+  transform-origin: top;
+  animation: shrinkDown 1.3s forwards; }
+
+.animGrowUp {
+  transform-origin: bottom;
+  animation: growUp 0.3s forwards; }
 
 @keyframes growX {
   0% {
@@ -1167,6 +1161,8 @@ nav {
 @keyframes shrinkDown {
   0% {
     transform: scaleY(1); }
+  30% {
+    transform: scaleY(0); }
   100% {
     transform: scaleY(0); } }
 
@@ -1175,22 +1171,3 @@ nav {
     transform: scaleY(0); }
   100% {
     transform: scaleY(1); } }
-
-@keyframes openClose {
-  0% {
-    transform: translateX(0); }
-  100% {
-    transform: translateX(100%); } }
-
-.testAnim {
-  background: white;
-  animation: diamond 1.2s;
-  transform: scale(0) rotate(45deg); }
-
-@keyframes diamond {
-  0% {
-    transform: rotate(45deg) scale(0); }
-  50% {
-    transform: rotate(45deg) scale(10); }
-  100% {
-    transform: rotate(45deg) scale(0); } }

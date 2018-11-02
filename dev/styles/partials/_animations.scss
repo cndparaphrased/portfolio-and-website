@@ -233,25 +233,25 @@
   }
 }
 
-.fadeInAnimation {
-  animation: fadeIn 1s .5s ease-in forwards;
-}
+// .fadeInAnimation {
+//   animation: fadeIn 1s .5s ease-in forwards;
+// }
 
-.fadeInIndex {
-  animation: fadeIn 1s 1.4s ease forwards;
-}
+// .fadeInIndex {
+//   animation: fadeIn 1s 1.4s ease forwards;
+// }
 
 
-@keyframes moveUp {
-  0% {
-    opacity: 0;
-		transform: translateY(25px);
-  }
-  100% {
-    opacity: 1;
-		transform: translateY(0);
-  }
-}
+// @keyframes moveUp {
+//   0% {
+//     opacity: 0;
+// 		transform: translateY(25px);
+//   }
+//   100% {
+//     opacity: 1;
+// 		transform: translateY(0);
+//   }
+// }
 
 @keyframes swipeLtoR {
 	0% {
@@ -298,30 +298,50 @@
 	}
 }
 
-@keyframes fadeIn {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
+// @keyframes fadeIn {
+//   0% {
+//     visibility: hidden;
+//     opacity: 0;
+//   }
 
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
+//   100% {
+//     visibility: visible;
+//     opacity: 1;
+//   }
+// }
 
 
 // = = = = = = = = = = = = = = = = = = = =
 // SHARED ANIMATIONS - GRID / SLIDESHOW
 // = = = = = = = = = = = = = = = = = = = =
 .animShrinkX {
+  transform-origin: left;
+  animation: shrinkX 1.3s forwards;
+}
+
+.animShrinkXFromRight {
   transform-origin: right;
-  animation: shrinkX 0.3s forwards;
+  animation: shrinkX 1.3s forwards;
 }
 
 .animGrowX {
   transform-origin: right;
   animation: growX 0.3s forwards;
+}
+
+.animGrowXFromLeft {
+  transform-origin: left;
+  animation: growX 0.3s forwards;
+}
+
+.animShrinkDown {
+  transform-origin: top;
+  animation: shrinkDown 1.3s forwards;
+}
+
+.animGrowUp {
+  transform-origin: bottom;
+  animation: growUp 0.3s forwards;
 }
 
 @keyframes growX {
@@ -346,6 +366,9 @@
   0% {
     transform: scaleY(1);
   }
+  30% {
+    transform: scaleY(0)
+  }
   100% {
     transform: scaleY(0);
   }
@@ -367,28 +390,3 @@
 // TESTING ENVIRONMENT
 // = = = = = = = = = = = = = = = = = = = =
 
-@keyframes openClose {
-  0% {
-    transform: translateX(0);
-  }
-  // 50% {
-  //   transform: scaleX(10);
-  // }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.testAnim {
-  // height: 100vh;
-  // width: 100%;
-  background: white;
-  animation: diamond 1.2s;
-  transform: scale(0) rotate(45deg);
-}
-
-    @keyframes diamond{
-      0%{transform:rotate(45deg) scale(0)}
-      50%{transform:rotate(45deg) scale(10)}
-      100%{transform:rotate(45deg) scale(0)}
-    }

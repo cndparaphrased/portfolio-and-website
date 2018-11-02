@@ -28,94 +28,50 @@ $(function() {
     const slideColor = $(currentCell).children('.slide__right').css('background-color');
     document.styleSheets[2].cssRules[167].style.backgroundColor = slideColor;
 
+    // activates swipe animation
+    $('body').addClass('swipeAnimation swipeRtoL');
 
-    $('body').addClass('swipeAnimation swipeLtoR');
-
+    // displays none everything but current cell
+    $('header').addClass('animShrinkX').fadeOut();
+    $('footer').addClass('animShrinkX').fadeOut();
+    $('.profile').addClass('animShrinkX').fadeOut().delay(800).queue(function() {
+      $(currentCell).addClass('animGrowX').css({display: 'flex'}).dequeue();
+    });
+    
     // remove classes on animation end
     $('body').on('animationend', function () {
       $('body').delay(100).queue(function() {
         $('body').removeClass().dequeue();
+        $('header').removeClass();
+        $('footer').removeClass();
+        $('.profile').removeClass('animShrinkX');
+        $(currentCell).removeClass('animGrowX');
       });
     });
-
-  });
-
-
-
-
-  // on click of each letter in profile grid
-  // $('.grid__cell .grid__link').on('click', function() {
-  //   const currentCell = $($(this).attr('href'));
-  //   const slideColor = $(currentCell).children('.slide__right').css('background-color');
-  //   document.styleSheets[2].cssRules[116].style.backgroundColor = slideColor;
-
-    // console.log('clicked');
-    console.log(document.styleSheets[2].cssRules);
-    console.log(document.styleSheets[2].cssRules[116].style.backgroundColor);
-
-    // $('.profile').addClass('animShrinkX').delay(.5).queue(function() {
-    //   $('body').addClass('swipeAnimation swipeLtoR');
-    // });
-
-    // toggle displays
-    // $('header').css({
-    //   opacity: 0,
-    //   visibility: 'hidden'
-    // });
-    // $('footer').css({
-    //   opacity: 0,
-    //   visibility: 'hidden'
-    // });
-    // $('.grid').css({
-    //   opacity: 0,
-    //   visibility: 'hidden'
-    // });
-
-    // $('header').removeClass('fadeInIndex');
-    // $('footer').removeClass('fadeInIndex');
-    // $('.grid').removeClass('fadeInIndex');
-
-    // $(currentCell).css({
-    //   display: 'flex'
-    // });
-    
-    
-    // add animations to the correct slide
-  //   $('body').addClass('swipeAnimation swipeLtoR');
-
-
-
-
-
-
-
-  // }); // end function onClick of each letter in profile
-
-
-
-
-
-
-
+  }); // end function onClick of each letter in profile
 
 
   // on click of center square
-  // $('.ctrl__desktop--center').on('click', function() {
-  //   const thisSlide = $(this).parents('div').eq(3);
+  $('.ctrl__desktop--center').on('click', function() {
+    const thisSlide = $(this).parents('div').eq(3);
+    
+    // activates animation
+    $('body').addClass('swipeUpAnimation swipeUp');
 
-  //   $(thisSlide).css({
-  //     display: 'none'
-  //   });
+    // re-displays grid, header, and footer
+    $(thisSlide).addClass('animShrinkDown').fadeOut().delay(1000).queue(function() {
+      $(thisSlide).removeClass('animShrinkDown').dequeue();
+      $('header').css({display: 'block'});
+      $('footer').css({display: 'block'});
+      $('.profile').css({display: 'block'});
+    });
 
-  //   // clears all animations on slides
-  //   $('.slide').removeClass('fadeInAnimation');
+    // clears all animations on slides
+    $('.slide').removeClass('animGrowX');
 
-  //   // re-displays profile
-  //   $('header').addClass('fadeInIndex');
-  //   $('footer').addClass('fadeInIndex');
-  //   $('.grid').addClass('fadeInIndex');
-  //   $('body').addClass('swipeUpAnimation swipeUp');
-  // }); // end function onClick of center square
+    // re-displays profile
+
+  }); // end function onClick of center square
 
 
 
@@ -127,60 +83,88 @@ $(function() {
   
 
   // on click of arrows
-  // $('.ctrl__desktop--arrows').on('click', function() {
-  //   const currentSlide = $(this).parents('div').eq(3);
-  //   const previousSlide = $(currentSlide).prev('.slide');
-  //   const nextSlide = $(currentSlide).next('.slide');
-  //   const prevSlideColor = $(previousSlide).children('.slide__right').css('background-color');
-  //   const nextSlideColor = $(nextSlide).children('.slide__right').css('background-color');
+  $('.ctrl__desktop--arrows').on('click', function() {
+    const currentSlide = $(this).parents('div').eq(3);
+    const previousSlide = $(currentSlide).prev('.slide');
+    const nextSlide = $(currentSlide).next('.slide');
 
-  //   // function to change the colour of the pseudo slide animation
-  //   function alterColor(directionSlideColor) {
-  //     document.styleSheets[2].cssRules[113].style.backgroundColor = directionSlideColor;
-  //   }
+    const currentSlideColor = $(currentSlide).children('.slide__right').css('background-color');
+    document.styleSheets[2].cssRules[167].style.backgroundColor = currentSlideColor;
 
-  //   // hide current slide
-  //   $(currentSlide).css({
-  //     display: 'none'
-  //   });
+    if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--right' && $(currentSlide).attr('id') === 'Z') {
+      $('body').addClass('swipeAnimation swipeRtoL');
+      $(currentSlide).fadeOut(900).delay(250).queue(function () {
+        $(currentSlide).siblings('#A').addClass('animGrowX').css({ display: 'flex'}).dequeue();
+      });
+    }
+    else if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--right') {
+      $('body').addClass('swipeAnimation swipeRtoL');
+      $(currentSlide).fadeOut(900).delay(250).queue(function() {
+        $(nextSlide).addClass('animGrowX').css({display: 'flex'}).dequeue();
+      });
+    } else if ($(this).attr('class') == 'btn ctrl__desktop--arrows ctrl__desktop--left' && $(currentSlide).attr('id') === 'A') {
+      $('body').addClass('swipeAnimation swipeLtoR');
+      $(currentSlide).addClass('animShrinkXFromRight').fadeOut(1000).delay(250).queue(function () {
+        $(currentSlide).siblings('#Z').addClass('animGrowXFromLeft').css({ display: 'flex' }).dequeue();
+      });
+    } else if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--left') {
+      $('body').addClass('swipeAnimation swipeLtoR');
+      $(currentSlide).addClass('animShrinkXFromRight').fadeOut(1000).delay(300).queue(function () {
+        $(previousSlide).addClass('animGrowXFromLeft').css({ display: 'flex' }).dequeue();
+      });
+    }
 
-  //   // reveal correct previous slide and run animation with correct color
-  //   // if slide is the first slide, find the last letter and display last slide
-  //   if ($(this).attr('class') == 'btn ctrl__desktop--arrows ctrl__desktop--left' && $(currentSlide).attr('id') === 'A') {
-  //     const directionZ = $(currentSlide).siblings('#Z').children('.slide__right').css('background-color');
-  //     alterColor(directionZ);
-  //     $(currentSlide).siblings('#Z').css({
-  //       display: 'flex'
-  //     }).addClass('fadeInAnimation');
-  //     $('body').addClass('swipeAnimation swipeLtoR');
-  //   } 
-  //   // any other back arrow click, display the previous slide
-  //   else if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--left') {
-  //     alterColor(prevSlideColor);
-  //     $(previousSlide).css({
-  //       display: 'flex'
-  //     }).addClass('fadeInAnimation');
-  //     $('body').addClass('swipeAnimation swipeLtoR');
-  //   } 
-  //   // reveal correct next slide and run animation with correct color
-  //   // if slide is the last slide, go back to the beginning and display first slide
-  //   else if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--right' && $(currentSlide).attr('id') === 'Z') {
-  //     const directionA = $(currentSlide).siblings('#A').children('.slide__right').css('background-color');
-  //     alterColor(directionA);
-  //     $(currentSlide).siblings('#A').css({
-  //       display: 'flex'
-  //     }).addClass('fadeInAnimation');
-  //     $('body').addClass('swipeAnimation swipeRtoL');
-  //   } 
-  //   // any other forward arrow click, display the next slide
-  //   else if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--right') {
-  //     alterColor(nextSlideColor);
-  //     $(nextSlide).css({
-  //       display: 'flex'
-  //     }).addClass('fadeInAnimation');
-  //     $('body').addClass('swipeAnimation swipeRtoL');
-  //   };
-  // }); // end function onClick of arrows
+
+
+
+
+
+
+
+
+
+
+
+    // hide current slide
+
+
+    // reveal correct previous slide and run animation with correct color
+    // if slide is the first slide, find the last letter and display last slide
+    // if ($(this).attr('class') == 'btn ctrl__desktop--arrows ctrl__desktop--left' && $(currentSlide).attr('id') === 'A') {
+    //   const directionZ = $(currentSlide).siblings('#Z').children('.slide__right').css('background-color');
+    //   alterColor(directionZ);
+    //   $(currentSlide).siblings('#Z').css({
+    //     display: 'flex'
+    //   }).addClass('fadeInAnimation');
+    //   $('body').addClass('swipeAnimation swipeLtoR');
+    // } 
+    // // any other back arrow click, display the previous slide
+    // else if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--left') {
+    //   alterColor(prevSlideColor);
+    //   $(previousSlide).css({
+    //     display: 'flex'
+    //   }).addClass('fadeInAnimation');
+    //   $('body').addClass('swipeAnimation swipeLtoR');
+    // } 
+    // reveal correct next slide and run animation with correct color
+    // if slide is the last slide, go back to the beginning and display first slide
+    // else if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--right' && $(currentSlide).attr('id') === 'Z') {
+    //   const directionA = $(currentSlide).siblings('#A').children('.slide__right').css('background-color');
+    //   alterColor(directionA);
+    //   $(currentSlide).siblings('#A').css({
+    //     display: 'flex'
+    //   }).addClass('fadeInAnimation');
+    //   $('body').addClass('swipeAnimation swipeRtoL');
+    // } 
+    // // any other forward arrow click, display the next slide
+    // else if ($(this).attr('class') === 'btn ctrl__desktop--arrows ctrl__desktop--right') {
+    //   alterColor(nextSlideColor);
+    //   $(nextSlide).css({
+    //     display: 'flex'
+    //   }).addClass('fadeInAnimation');
+    //   $('body').addClass('swipeAnimation swipeRtoL');
+    // };
+  }); // end function onClick of arrows
 }); // end doc ready
 
 
