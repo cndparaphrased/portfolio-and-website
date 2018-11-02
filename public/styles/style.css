@@ -449,7 +449,7 @@ nav {
 .slide__controls {
   display: flex;
   align-items: center;
-  margin: 5rem 0; }
+  margin: 5rem 0 8rem; }
 
 .ctrl__desktop--arrows {
   margin: 0 7rem; }
@@ -678,7 +678,7 @@ nav {
     align-items: center;
     position: absolute;
     top: 4rem;
-    right: -4rem;
+    right: -2rem;
     width: 100vw;
     height: 0;
     transition: all .5s ease-out; }
