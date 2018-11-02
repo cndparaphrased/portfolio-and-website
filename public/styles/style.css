@@ -757,13 +757,11 @@ nav {
   .slide__subtext {
     text-align: left; }
   .slide__text {
-    font-size: 6rem; }
+    font-size: 5.4rem; }
   .slide__subtext {
     font-size: 2.6rem;
     line-height: 4rem;
     margin: 2rem 0; }
-  .slide__controls {
-    margin: 0 3rem 3rem 3rem; }
   .ctrl__desktop--arrows svg {
     height: 40px; }
   .ctrl__desktop--arrows polyline {
@@ -787,13 +785,12 @@ nav {
   .slide__subtext {
     text-align: center; }
   .slide__text {
-    font-size: 5rem;
-    line-height: 5.6rem; }
+    font-size: 4.5rem;
+    line-height: 5rem; }
   .slide__subtext {
     font-size: 2.5rem;
-    line-height: 3.5rem; }
-  .slide__controls {
-    margin: 0 4rem 4rem 4rem; }
+    line-height: 3.4rem;
+    margin: 3rem 0 0; }
   .contact__textblock .textblock {
     font-size: 1.6rem; }
   .form__name,
@@ -870,9 +867,10 @@ nav {
     max-height: 35vh; }
   .slide__words {
     margin: 0 2rem; }
-  .slide__text {
-    line-height: 6rem; }
   .slide__subtext {
+    font-size: 2.3rem;
+    line-height: 3.3rem;
+    margin: 1.5rem 0 0;
     padding: 0 1rem; }
   .contactLeft {
     flex-direction: column; }
@@ -916,8 +914,6 @@ nav {
     line-height: 3rem;
     padding: 0 2rem;
     margin: 1.5rem 0; }
-  .slide__controls {
-    margin: 0 3rem 2.6rem 3rem; }
   .ctrl__desktop--arrows {
     margin: 0 5rem; }
   .contactBg {
@@ -1142,6 +1138,10 @@ nav {
   transform-origin: top;
   animation: shrinkDown 1.3s forwards; }
 
+.animShrinkUp {
+  transform-origin: top;
+  animation: shrinkUp 1.3s forwards; }
+
 .animGrowUp {
   transform-origin: bottom;
   animation: growUp 0.3s forwards; }
@@ -1163,6 +1163,12 @@ nav {
     transform: scaleY(1); }
   30% {
     transform: scaleY(0); }
+  100% {
+    transform: scaleY(0); } }
+
+@keyframes shrinkUp {
+  0% {
+    transform: scaleY(1); }
   100% {
     transform: scaleY(0); } }
 

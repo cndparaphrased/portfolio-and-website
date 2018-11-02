@@ -233,26 +233,6 @@
   }
 }
 
-// .fadeInAnimation {
-//   animation: fadeIn 1s .5s ease-in forwards;
-// }
-
-// .fadeInIndex {
-//   animation: fadeIn 1s 1.4s ease forwards;
-// }
-
-
-// @keyframes moveUp {
-//   0% {
-//     opacity: 0;
-// 		transform: translateY(25px);
-//   }
-//   100% {
-//     opacity: 1;
-// 		transform: translateY(0);
-//   }
-// }
-
 @keyframes swipeLtoR {
 	0% {
 		width: 0;
@@ -298,19 +278,6 @@
 	}
 }
 
-// @keyframes fadeIn {
-//   0% {
-//     visibility: hidden;
-//     opacity: 0;
-//   }
-
-//   100% {
-//     visibility: visible;
-//     opacity: 1;
-//   }
-// }
-
-
 // = = = = = = = = = = = = = = = = = = = =
 // SHARED ANIMATIONS - GRID / SLIDESHOW
 // = = = = = = = = = = = = = = = = = = = =
@@ -337,6 +304,11 @@
 .animShrinkDown {
   transform-origin: top;
   animation: shrinkDown 1.3s forwards;
+}
+
+.animShrinkUp {
+  transform-origin: top;
+  animation: shrinkUp 1.3s forwards;
 }
 
 .animGrowUp {
@@ -374,6 +346,15 @@
   }
 }
 
+@keyframes shrinkUp {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
 @keyframes growUp {
   0% {
     transform: scaleY(0);
@@ -382,11 +363,3 @@
     transform: scaleY(1);
   }
 }
-
-
-
-
-// = = = = = = = = = = = = = = = = = = = =
-// TESTING ENVIRONMENT
-// = = = = = = = = = = = = = = = = = = = =
-
