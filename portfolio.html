@@ -54,104 +54,69 @@
   <!-- MAIN STARTS -->
   <main>
     <!-- PORTFOLIO SECTION STARTS -->
-    <section class="portfolio">
-      <!-- <div class="wrapper">
-        <div class="portfolio__description">
-          <div class="portfolio__bracket">
-            <img class="portfolio__bracketImg" src="assets/logoleft.png" alt="">
-          </div>
-          <p class="portfolio__intro">Here are just a few samples for you to browse. Feel free to click on any of them to run a live demo. All portfolio pieces are fully responsive and mobile-friendly.</p>
-          <div class="portfolio__bracket">
-            <img class="portfolio__bracketImg" src="assets/logoright.png" alt="">
-          </div>
+    <div class="wrapper">
+      <section class="portfolio">
+        <ul class="portfolio__container">
+          <li class="portfolio__piece">
+            <h2 class="piece__title">Comedy Clapback Tour</h2>
+            <h4 class="piece__subtext">Javascript & jQuery</h4>
+            <p class="piece__description">Generates a random GIF based on user selections</p>
+            <a href="" class="piece__link">Live Demo</a>
+          </li>
+          <li class="portfolio__piece">
+            <h2 class="piece__title">Adventure Advisor</h2>
+            <h4 class="piece__subtext">Javascript & multiple APIs</h4>
+            <p class="piece__description">Presents informtion on a randomized travel destination</p>
+            <a href="" class="piece__link">Live Demo</a>
+          </li>
+          <li class="portfolio__piece portfolio__piece--active">
+            <h2 class="piece__title">Mind on a Shelf</h2>
+            <h4 class="piece__subtext">React & Firebase</h4>
+            <p class="piece__description">A list app with a mental health twist. Input thoughts with the ability to retrieve, delete, & modify.</p>
+            <!-- <a href="" class="piece__link">Live Demo</a> -->
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+            <div class="portfolio__gridFiller"></div>
+          </li>
+          <li class="portfolio__piece">
+            <h2 class="piece__title">Moon Dollar Coffee & Cocktail</h2>
+            <h4 class="piece__subtext">React, APIs, & Github collaboration</h4>
+            <p class="piece__description">Finds a cocktail that highlights the client's coffee product</p>
+            <a href="" class="piece__link">Live Demo</a>
+          </li>
+        </ul>
+
+        <div class="portfolio__nav">
+          <button class="portfolio__arrows portfolio__arrows--left">
+            <svg width="40px" height="50px" viewBox="0 0 50 80" xml:space="preserve">
+              <polyline fill="none" stroke="#fbfef9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" points="
+              45.63,70.8 0.375,38.087 45.63,5.375 " />
+            </svg>
+          </button>
+
+          <button class="portfolio__arrows portfolio__arrows--right">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="50px" viewBox="0 0 50 80" xml:space="preserve">
+              <polyline fill="none" stroke="#fbfef9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" points="0.375,5.375 45.63,38.087 0.375,70.8 " />
+            </svg>
+          </button>
         </div>
-      </div> -->
-
-      <button class="btn">
-        <svg width="40px" height="50px" viewBox="0 0 50 80" xml:space="preserve">
-          <polyline fill="none" stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" points="
-          45.63,75.8 0.375,38.087 45.63,0.375 " />
-        </svg>
-      </button>
-      <!-- PORTFOLIO CAROUSEL STARTS -->
-      <div class="carousel">
-        <!-- PORTFOLIO PIECE ONE -->
-        <div class="portfolio__item portfolio__item--active">
-          <div class="box">
-            <div class="box__shadow box__shadow--bottom box__shadow--left"></div>
-            <a class="portfolio__link" href="http://cndparaphrased.github.io/comedy-gif-app" target="_blank">
-              <img class="portfolio__img" src="assets/portfolioComedy.png" alt="snapshot of Comedy Clapback GIF generator">
-            </a>
-            <h3 class="portfolio__title portfolio__title--top portfolio__title--right">Comedy Clapback Tour</h3>
-            <p class="portfolio__text portfolio__text--left portfolio__text--top">Javascript & jQuery</p>
-            <p class="portfolio__content portfolio__content--right portfolio__content--top">Generates a random GIF based on user selections</p>
-          </div>
-        </div>
-
-
-        <!-- PORTFOLIO PIECE TWO -->
-          <div class="portfolio__item">
-            <div class="box">
-              <div class="box__shadow box__shadow--bottom box__shadow--right"></div>
-              <a class="portfolio__link" href="https://mind-on-a-shelf.firebaseapp.com/" target="_blank">
-                <img class="portfolio__img" src="assets/portfolioMind.png" alt="snapshot of Mind on a Shelf application">
-              </a>
-              <h3 class="portfolio__title portfolio__title--bottom portfolio__title--left">Mind on a Shelf</h3>
-              <p class="portfolio__text portfolio__text--bottom portfolio__text--right">React & Firebase</p>
-              <p class="portfolio__content portfolio__content--left">Input thoughts with the ability to retrieve and modify</p>
-            </div>
-          </div>
-
-        <!-- PORTFOLIO PIECE THREE -->
-          <div class="portfolio__item">
-            <div class="box">
-              <div class="box__shadow box__shadow--bottom box__shadow--left"></div>
-              <a class="portfolio__link" href="https://moondollars-2dd28.firebaseapp.com/" target="_blank">
-                <img class="portfolio__img portfolio__img--moon" src="assets/portfolioMoon.png" alt="snapshot of Moon Dollar Coffee application">
-              </a>
-              <h3 class="portfolio__title portfolio__title--top portfolio__title--right">Moon Dollar Cocktails</h3>
-              <p class="portfolio__text portfolio__text--top portfolio__text--left">React & APIs</p>
-              <p class="portfolio__content portfolio__content--top portfolio__content--right">Finds a cocktail that highlights client's coffee product</p>
-            </div>
-          </div>
-
-        <!-- PORTFOLIO PIECE FOUR -->
-          <div class="portfolio__item">
-            <div class="box">
-              <div class="box__shadow box__shadow--bottom box__shadow--right"></div>
-              <a class="portfolio__link" href="https://thebalancedrobot.github.io/cindy-rita_project4/" target="_blank">
-                <img class="portfolio__img" src="assets/portfolioAdventure.png" alt="snapshot of Adventure Advisor web application">
-              </a>
-              <h3 class="portfolio__title portfolio__title--bottom portfolio__title--left">Adventure Advisor</h3>
-              <p class="portfolio__text portfolio__text--bottom portfolio__text--right">Javascript & APIs</p>
-              <p class="portfolio__content portfolio__content--bottom portfolio__content--left">Presents information on a randomized travel destination</p>
-            </div>
-          </div>
-      </div>
-      <!-- PORTFOLIO CAROUSEL ENDS -->
-      <button class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="50px" viewBox="0 0 50 80"
-          xml:space="preserve">
-          <polyline fill="none" stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" points="
-          0.375,0.375 45.63,38.087 0.375,75.8 " />
-        </svg>
-      </button>
-
-    </section>
+      </section>
+    </div>
     <!-- PORTFOLIO SECTION ENDS -->
-
-    <!-- <section class="temporary">
-      <div class="portfolio__description">
-        <div class="portfolio__bracket">
-          <img class="portfolio__bracketImg" src="assets/logoleft.png" alt="">
-        </div>
-        <p class="portfolio__intro">Coming Soon!</p>
-        <div class="portfolio__bracket">
-          <img class="portfolio__bracketImg" src="assets/logoright.png" alt="">
-        </div>
-      </div>
-    </section>
-  </main> -->
+  </main>
   <!-- MAIN ENDS -->
 
   <!-- FOOTER STARTS -->

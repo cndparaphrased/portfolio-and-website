@@ -24,9 +24,12 @@ $(function() {
 
   // on click of each letter in profile grid 
   $('.grid__cell .grid__link').on('click', function() {
+    console.log('click');
     const currentCell = $($(this).attr('href'));
-    const slideColor = $(currentCell).children('.slide__right').css('background-color');
-    document.styleSheets[2].cssRules[167].style.backgroundColor = slideColor;
+    // const slideColor = $(currentCell).children('.slide__right').css('background-color');
+    // document.styleSheets[2].cssRules[167].style.backgroundColor = slideColor;
+
+    console.log(document.styleSheets);
 
     // activates swipe animation
     $('body').addClass('swipeAnimation swipeRtoL');
@@ -71,14 +74,6 @@ $(function() {
     }, 1870);
 
   }); // end function onClick of center square
-
-
-
-
-
-
-
-
   
 
   // on click of arrows
