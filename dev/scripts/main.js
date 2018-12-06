@@ -1,5 +1,7 @@
 $(function() {
-
+// = = = = = = = = = = = = = = = = = = = =
+// PROFILE EVENTS
+// = = = = = = = = = = = = = = = = = = = =
   // prevent scrolling on touch devices
   $(document.body).on('touchmove', function(e) {
     e.preventDefault();
@@ -24,7 +26,6 @@ $(function() {
 
   // on click of each letter in profile grid 
   $('.grid__cell .grid__link').on('click', function() {
-    console.log('click');
     const currentCell = $($(this).attr('href'));
     // const slideColor = $(currentCell).children('.slide__right').css('background-color');
     // document.styleSheets[2].cssRules[167].style.backgroundColor = slideColor;
@@ -110,6 +111,51 @@ $(function() {
       });
     }
   }); // end function onClick of arrows
+
+
+// = = = = = = = = = = = = = = = = = = = =
+// PORTFOLIO EVENTS
+// = = = = = = = = = = = = = = = = = = = =
+// $('.menu__link').on('click', function(e) {
+//   e.preventDefault();
+
+//   const _href = $(this).attr('href');
+
+//   history.pushState(null, null, _href);
+
+//   loadContent(_href);
+// });
+
+// function loadContent(href) {
+//   $('main').find('.mainContent').fadeOut(200, function() {
+//     $('main').hide().load(href + ' .mainContent', function() {
+//       $('main').fadeIn(200);
+//     });
+//   });
+// };
+
+// $(window).bind('popstate', function() {
+//   const _href = location.pathname.replace(/^.*[\\\/]/, '');
+//   loadContent(_href);
+// });
+
+
+
+
+$('.portfolio__container').flickity({
+  freeScroll: true,
+  wrapAround: true,
+  arrowShape: {
+    x0: 10,
+    x1: 60, y1: 50,
+    x2: 65, y2: 50,
+    x3: 15
+  }
+  // cellAlign: center
+});
+
+
+
+
+
 }); // end doc ready
-
-

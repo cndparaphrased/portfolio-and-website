@@ -10,6 +10,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Barlow+Semi+Condensed:400,500" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="public/styles/style.css">
   <title>Cindy Poon Yeung | Web Developer</title>
 </head>
@@ -54,65 +55,90 @@
   <!-- MAIN STARTS -->
   <main>
     <!-- PORTFOLIO SECTION STARTS -->
-    <div class="wrapper">
+    <div class="wrapper mainContent">
       <section class="portfolio">
         <ul class="portfolio__container">
-          <li class="portfolio__piece">
-            <h2 class="piece__title">Comedy Clapback Tour</h2>
-            <h4 class="piece__subtext">Javascript & jQuery</h4>
-            <p class="piece__description">Generates a random GIF based on user selections</p>
-            <a href="" class="piece__link">Live Demo</a>
+          <li class="portfolio__piece portfolio__piece--odd">
+            <div class="img__box img__box--odd">
+              <svg class="crosshairs crosshairs--top crosshairs--left" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+              <svg class="crosshairs crosshairs--top crosshairs--right" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+
+              <a href="https://cndparaphrased.github.io/comedy-gif-app/" target="_blank" class="piece__link">
+                <img class="piece__img" src="assets/portfolioComedy.png" alt="Screenshot of application">
+              </a>
+
+              <svg class="crosshairs crosshairs--bottom crosshairs--left" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+              <svg class="crosshairs crosshairs--bottom crosshairs--right" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+            </div>
+
+            <div class="piece__details piece__details--odd">
+              <h4 class="piece__subtext piece__subtext--odd">Javascript & jQuery</h4>
+              <h2 class="piece__title piece__title--odd">Comedy Clapback Tour</h2>
+              <p class="piece__description piece__description--odd">Generates a random GIF based on user selections</p>
+            </div>
           </li>
-          <li class="portfolio__piece">
-            <h2 class="piece__title">Adventure Advisor</h2>
-            <h4 class="piece__subtext">Javascript & multiple APIs</h4>
-            <p class="piece__description">Presents informtion on a randomized travel destination</p>
-            <a href="" class="piece__link">Live Demo</a>
+
+          <li class="portfolio__piece portfolio__piece--even">
+            <div class="piece__details piece__details--even">
+              <h4 class="piece__subtext piece__subtext--even">React & Firebase</h4>
+              <h2 class="piece__title piece__title--even">Mind on a Shelf</h2>
+              <p class="piece__description piece__description--even">A list app with a mental health twist; input thoughts with the ability to retrieve, delete, & modify</p>
+            </div>
+
+            <div class="img__box img__box--even">
+              <svg class="crosshairs crosshairs--top crosshairs--left" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+              <svg class="crosshairs crosshairs--top crosshairs--right" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+
+              <a href="https://mind-on-a-shelf.firebaseapp.com/" target="_blank" class="piece__link">
+                <img class="piece__img" src="assets/portfolioMind.png" alt="Screenshot of application">
+              </a>
+
+              <svg class="crosshairs crosshairs--bottom crosshairs--left" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+              <svg class="crosshairs crosshairs--bottom crosshairs--right" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+            </div>
           </li>
-          <li class="portfolio__piece portfolio__piece--active">
-            <h2 class="piece__title">Mind on a Shelf</h2>
-            <h4 class="piece__subtext">React & Firebase</h4>
-            <p class="piece__description">A list app with a mental health twist. Input thoughts with the ability to retrieve, delete, & modify.</p>
-            <!-- <a href="" class="piece__link">Live Demo</a> -->
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
-            <div class="portfolio__gridFiller"></div>
+
+
+          <li class="portfolio__piece portfolio__piece--odd">
+            <div class="img__box img__box--odd">
+              <svg class="crosshairs crosshairs--top crosshairs--left" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+              <svg class="crosshairs crosshairs--top crosshairs--right" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+
+              <a href="https://moondollars-2dd28.firebaseapp.com/" target="_blank" class="piece__link">
+                <img class="piece__img" src="assets/portfolioMoon.png" alt="Screenshot of application">
+              </a>
+
+              <svg class="crosshairs crosshairs--bottom crosshairs--left" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+              <svg class="crosshairs crosshairs--bottom crosshairs--right" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+            </div>
+
+            <div class="piece__details piece__details--odd">
+              <h4 class="piece__subtext piece__subtext--odd">React, APIs, & Github collaboration</h4>
+              <h2 class="piece__title piece__title--odd">Moon Dollar Coffee & Cocktail</h2>
+              <p class="piece__description piece__description--odd">Finds a cocktail that highlights the client's coffee product</p>
+            </div>
           </li>
-          <li class="portfolio__piece">
-            <h2 class="piece__title">Moon Dollar Coffee & Cocktail</h2>
-            <h4 class="piece__subtext">React, APIs, & Github collaboration</h4>
-            <p class="piece__description">Finds a cocktail that highlights the client's coffee product</p>
-            <a href="" class="piece__link">Live Demo</a>
+          
+          <li class="portfolio__piece portfolio__piece--even">
+            <div class="piece__details piece__details--even">
+              <h4 class="piece__subtext piece__subtext--even">Javascript & multiple APIs</h4>
+              <h2 class="piece__title piece__title--even">Adventure Advisor</h2>
+              <p class="piece__description piece__description--even">Presents information on a randomized travel destination</p>
+            </div>
+
+            <div class="img__box img__box--even">
+              <svg class="crosshairs crosshairs--top crosshairs--left" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+              <svg class="crosshairs crosshairs--top crosshairs--right" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+
+              <a href="https://thebalancedrobot.github.io/cindy-rita_project4/" target="_blank" class="piece__link">
+                <img class="piece__img" src="assets/portfolioAdventure.png" alt="Screenshot of application">
+              </a>
+
+              <svg class="crosshairs crosshairs--bottom crosshairs--left" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+              <svg class="crosshairs crosshairs--bottom crosshairs--right" width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18v-18h.1v18h18v.1h-18v18h-.1v-18h-18v-.1h18z"/></svg>
+            </div>
           </li>
         </ul>
-
-        <div class="portfolio__nav">
-          <button class="portfolio__arrows portfolio__arrows--left">
-            <svg width="40px" height="50px" viewBox="0 0 50 80" xml:space="preserve">
-              <polyline fill="none" stroke="#fbfef9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" points="
-              45.63,70.8 0.375,38.087 45.63,5.375 " />
-            </svg>
-          </button>
-
-          <button class="portfolio__arrows portfolio__arrows--right">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="50px" viewBox="0 0 50 80" xml:space="preserve">
-              <polyline fill="none" stroke="#fbfef9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" points="0.375,5.375 45.63,38.087 0.375,70.8 " />
-            </svg>
-          </button>
-        </div>
       </section>
     </div>
     <!-- PORTFOLIO SECTION ENDS -->
@@ -132,6 +158,8 @@
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
     crossorigin='anonymous'></script>  
   <script src="public/scripts/main.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 
 </body>
 </html>
