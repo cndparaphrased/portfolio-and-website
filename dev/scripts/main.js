@@ -3,10 +3,10 @@ $(function() {
 // PROFILE EVENTS
 // = = = = = = = = = = = = = = = = = = = =
   // prevent scrolling on touch devices
-  $(document.body).on('touchmove', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-  }); // end function to prevent scrolling
+  // $(document.body).on('touchmove', function(e) {
+  //   e.preventDefault();
+  //   e.stopPropagation();
+  // }); // end function to prevent scrolling
 
   // on click of hamburger menu
   $('.mobileMenu').on('click', function() {
@@ -145,6 +145,7 @@ $(function() {
 
 $('.portfolio__container').flickity({
   wrapAround: true,
+  draggable: '>1',
   arrowShape: {
     x0: 10,
     x1: 60, y1: 50,
