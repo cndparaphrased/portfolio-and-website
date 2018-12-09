@@ -1,4 +1,5 @@
 @media (max-width: 1100px) {
+// GENERAL / HEADER
   h1 {
     font-size: 2.8rem;
   }
@@ -11,6 +12,7 @@
     margin-left: 8rem;
   }
 
+// INDEX / PROFILE
   .profile {
     margin: 0 1.5rem;
   }
@@ -43,152 +45,50 @@
     line-height: 3.5rem;
   }
 
+// PORTFOLIO PAGE
+  .portfolio__container {
+    padding-top: 1rem;
+  }
+
   .portfolio__piece {
-    grid-template-rows: 20% 60% 20%;
-    position: relative;
-  }
-
-  .portfolio__piece--odd {
-    grid-template-columns: 80% 1.5% 18.5%;
-  }
-
-  .portfolio__piece--even {
-    grid-template-columns: 18.5% 1.5% 80%;
+    grid-template-rows: 80% 20%;
+    grid-template-columns: 10% 80% 10%;
+    padding: 0 5rem;
   }
 
   .img__box {
-    grid-row: 2 / 3;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
     width: 100%;
-  }
-  
-  .img__box--odd {
-    grid-column: 1 / 3;
-    padding-left: 7rem;
-  }
-
-  .img__box--even {
-    justify-self: start;
-    grid-column: 2 / 4;
-    padding-right: 7rem;
-  }
-
-  .crosshairs {
-    display: none;
   }
 
   .piece__details {
-    display: grid;
-    grid-template-rows: 20% 60% 20%;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    display: none;
   }
 
-  .piece__details--odd {
-    grid-template-columns: 80% 1.5% 18.5%;
-  }
-
-  .piece__details--even {
-    grid-template-columns: 18.5% 1.5% 80%;
-  }
-
-  .piece__title {
-    grid-row: 1 / 4;
-    font-size: 4.5rem;
-    line-height: 4.5rem;
-    text-transform: uppercase;
-    text-align: center;
-    z-index: -10;
-  }
-  
-  .piece__title--odd {
-    grid-column: 3 / 4;
-    padding-left: 7rem;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-  }
-
-  .piece__title--even {
-    grid-column: 1 / 2;
-    writing-mode: vertical-lr;
-    justify-self: end;
-  }
-
-  .piece__subtext {
-    grid-row: 1 / 2;
+  .piece__details--mobile {
+    display: block;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
     font-size: 2rem;
+    align-self: start;
+    padding-top: 1rem;
   }
 
-  .piece__subtext::before {
-    width: 10rem;
+  .piece__title--mobile {
+    font-weight: 500;
   }
 
-  .piece__subtext--odd {
-    margin-left: 11rem;
-    padding-left: 3rem;
+  .piece__description--mobile,
+  .piece__subtext--mobile {
+    letter-spacing: .5px;
   }
 
-  .piece__subtext--odd::before {
-    left: -11rem;
+  .piece__description--mobile {
+    margin-bottom: 1rem;
   }
 
-
-
-
-
-
-  
-  .piece__subtext--odd,
-  .piece__description--odd {
-    grid-column: 1 / 2;
-    // margin-left: 16rem;
-  }
-
-  .piece__subtext--even,
-  .piece__description--even {
-    grid-column: 3 / 4;
-  }
-
-  .piece__description {
-    grid-row: 3 / 4;
-    text-transform: lowercase;
-    position: relative;
-  }
-
-
-
-
-
-
-
-
-  .piece__description--odd::before {
-    content: "";
-    background: $black;
-    width: 12rem;
-    height: 1px;
-    position: absolute;
-    top: 50%;
-    left: -13rem;
-    z-index: 10;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// CONTACT PAGE
   .contactMain {
     flex-direction: column;
     justify-content: center;
@@ -244,14 +144,14 @@
     margin: 1rem 0;
   }
 
+// FOOTER
   .footer__container {
     padding-bottom: 3.5rem;
   }
-
-
 } // = = = = = = = = = = = = = = = END MAX-WIDTH 1100px
 
 @media (max-width: 950px) {
+// INDEX / PROFILE
   .slide__words {
     padding: 0 2rem;
   }
@@ -265,6 +165,17 @@
     margin: 2rem 0 4rem;
   }
 
+//PORTFOLIO PAGE
+  .portfolio__piece {
+    grid-template-rows: 75% 25%;
+  }
+
+  .piece__details--mobile {
+    padding-top: 0;
+    font-size: 1.8rem;
+  }
+
+// CONTACT PAGE
   .contactImg__box {
     display: none;
   }
@@ -297,11 +208,11 @@
     height: 0;
     transition: all .5s ease-out;
   }
-
+  
   .menu--active {
     height: 100vh;
   }
-
+  
   .menu__item {
     display: none;
     margin: 0;
@@ -357,6 +268,7 @@
   } 
   // = = = = = = = = = = NAVIGATION CHANGE STYLES ENDS
 
+// INDEX / PROFILE
   .profile {
     margin: 0;
   }
@@ -439,13 +351,20 @@
     height: 40px;
   }
 
+// PORTFOLIO PAGE
+  .portfolio__piece {
+    grid-template-rows: 65% 35%;
+  }
+
 } // = = = = = = = = = = = = = = = END MAX-WIDTH 800px
 
 @media (max-width: 600px) {
+// GENERAL / HEADER
   .wrapper {
     padding: 0 2rem;
   }
 
+// INDEX / PROFILE
   .grid__cell:not(:first-child) {
     margin: 10%;
   }
@@ -478,6 +397,41 @@
     margin: 3rem 0 0;
   }
 
+// PORTFOLIO PAGE
+  .portfolio__piece {
+    padding: 0;
+    margin-right: 1rem;
+  }
+
+  .img__box {
+    width: calc(100% + 4rem);
+  }
+
+  .crosshairs--top {
+    top: -3rem;
+  }
+
+  .crosshairs--bottom {
+    bottom: -3rem;
+  }
+
+  .crosshairs--left {
+    left: -3rem;
+  }
+
+  .crosshairs--right {
+    right: -3rem;
+  }
+
+  .piece__details--mobile {
+    text-align: center;
+  }
+
+  .flickity-prev-next-button {
+    display: none;
+  }
+
+// CONTACT PAGE
   .contact__textblock {
     .textblock {
       font-size: 1.6rem;
@@ -501,6 +455,7 @@
 } // = = = = = = = = = = = = = = = END MAX-WIDTH 600px
 
 @media (max-width: 500px) {
+// GENERAL / HEADER
   .header__container {
     padding-top: 0;
   }
@@ -574,6 +529,7 @@
     }
   }
 
+// INDEX / PROFILE
   .profile {
     height: calc(100vh - 9.5rem);
   }
@@ -624,6 +580,25 @@
     padding: 0 1rem;
   }
 
+// PORTFOLIO PAGE
+  .portfolio__piece {
+    grid-template-rows: 55% 45%;
+  }
+
+  .img__box {
+    width: calc(100% + 8rem);
+  }
+
+  .crosshairs {
+    display: none;
+  }
+
+  .piece__details--mobile {
+    grid-column: 1 / 4;
+    padding: 0 .4rem;
+  }
+
+// CONTACT PAGE
   .contactLeft {
     flex-direction: column;
   }
@@ -647,6 +622,7 @@
 } // = = = = = = = = = = = = = = = END MAX-WIDTH 500px
 
 @media (max-width: 410px) {
+// GENERAL AND HEADER
   .wrapper {
     padding: 0 1.5rem;
   }
@@ -663,6 +639,7 @@
     font-size: 2rem;
   }
 
+// INDEX / PROFILE PAGE
   .grid {
     grid-template-columns: repeat(3, calc(100% / 3));
     grid-template-rows: repeat(10, calc((100vh - 10rem) / 10));
@@ -703,6 +680,12 @@
     margin: 0 5rem;
   }
 
+// PORTFOLIO PAGE
+  .img__box {
+    width: calc(100% + 6rem);
+  }
+
+// CONTACT PAGE
   .contactBg {
     display: none;
   }

@@ -4,6 +4,12 @@
 
 .portfolio__container {
   height: calc(100vh - 14rem);
+  animation: growUp 0.5s forwards;
+
+}
+
+.portfolio__container--active {
+  z-index: -10;
 }
 
 .portfolio__piece {
@@ -49,11 +55,16 @@
   right: -4rem;
 }
 
+.piece__details--mobile {
+  display: none;
+}
+
 .piece__details {
   width: 70%;
 }
 
 .piece__details--even {
+  order: -1;
   justify-self: end;
   text-align: right;
 }
@@ -92,7 +103,6 @@
 .piece__description {
   font-size: 2rem;
 }
-
 
 .flickity-prev-next-button {
   width: 90px;

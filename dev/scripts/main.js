@@ -11,6 +11,7 @@ $(function() {
   // on click of hamburger menu
   $('.mobileMenu').on('click', function() {
     $('.grid').toggleClass('grid--active');
+    $('.portfolio__container').toggleClass('portfolio__container portfolio__container--active');
     $('.menu').toggleClass('menu--active');
     $('.menu__item').fadeToggle(300);
     if ($(window).width() <= 500) {
@@ -27,10 +28,10 @@ $(function() {
   // on click of each letter in profile grid 
   $('.grid__cell .grid__link').on('click', function() {
     const currentCell = $($(this).attr('href'));
-    // const slideColor = $(currentCell).children('.slide__right').css('background-color');
-    // document.styleSheets[2].cssRules[167].style.backgroundColor = slideColor;
+    const slideColor = $(currentCell).children('.slide__right').css('background-color');
+    document.styleSheets[2].cssRules[194].style.backgroundColor = slideColor;
 
-    console.log(document.styleSheets);
+    // console.log(document.styleSheets);
 
     // activates swipe animation
     $('body').addClass('swipeAnimation swipeRtoL');
@@ -84,7 +85,7 @@ $(function() {
     const nextSlide = $(currentSlide).next('.slide');
 
     const currentSlideColor = $(currentSlide).children('.slide__right').css('background-color');
-    document.styleSheets[2].cssRules[167].style.backgroundColor = currentSlideColor;
+    document.styleSheets[2].cssRules[194].style.backgroundColor = currentSlideColor;
 
     $('.slide').removeClass().addClass('slide');
 
@@ -143,7 +144,6 @@ $(function() {
 
 
 $('.portfolio__container').flickity({
-  freeScroll: true,
   wrapAround: true,
   arrowShape: {
     x0: 10,
@@ -151,7 +151,6 @@ $('.portfolio__container').flickity({
     x2: 65, y2: 50,
     x3: 15
   }
-  // cellAlign: center
 });
 
 
