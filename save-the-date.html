@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
   <link type="image/png" href="assets/favicon.png" rel="icon">
-  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="public/styles/style.css">
   <title>Cindy & Jarek | Save the Date</title>
 </head>
@@ -23,7 +25,7 @@
         <!-- LEFT-MOST SQUARE STARTS -->
         <div class="wedding__square">
           <div class="wedding__photo wedding__photo--left">
-            <img src="assets/wedding/jb01.png" alt="Jarek">
+            <!-- <img src="assets/wedding/jarek.png" alt="Jarek"> -->
           </div>
         </div>
         <!-- LEFT-MOST SQUARE ENDS -->
@@ -40,7 +42,7 @@
       
           <!-- KING -->
           <div class="wedding__item wedding__item--king hidden__mobile">
-            <div class="wedding__imgs">
+            <div class="wedding__imgs wedding__imgs--king">
               <img src="assets/wedding/king.png" alt="King Streetcar">
             </div>
           </div>
@@ -56,14 +58,14 @@
         <div class="wedding__square">
           <!-- TWO OF US -->
           <div class="wedding__item wedding__item--us02">
-            <div class="wedding__imgs--us02">
+            <div class="wedding__imgs wedding__imgs--us02">
               <img src="assets/wedding/us02.png" alt="Cindy and Jarek">
             </div>
           </div>
       
           <!-- UNION STATION -->
           <div class="wedding__item wedding__item--union hidden__mobile">
-            <div class="wedding__imgs">
+            <div class="wedding__imgs wedding__imgs--union">
               <img src="assets/wedding/union01.png" alt="Union Station">
             </div>
           </div>
@@ -72,7 +74,7 @@
       
           <!-- GARDINER -->
           <div class="wedding__item hidden__mobile">
-            <div class="wedding__imgs--gardiner">
+            <div class="wedding__imgs wedding__imgs--gardiner">
               <img src="assets/wedding/gardiner.png" alt="Gardiner Museum">
             </div>
           </div>
@@ -84,8 +86,8 @@
           <div class="center__text">
             <div>
               <p class="text">july</p>
-              <p class="text">fourth</p>
-              <p class="text">2020</p>
+              <p class="text">third</p>
+              <p class="text">2021</p>
             </div>
             <p class="subtext">save the date</p>
           </div>
@@ -99,7 +101,7 @@
       
           <!-- QUEEN -->
           <div class="wedding__item wedding__item--queen hidden__mobile">
-            <div class="wedding__imgs">
+            <div class="wedding__imgs wedding__imgs--queen">
               <img src="assets/wedding/queen.png" alt="Queen Subway Station">
             </div>
           </div>
@@ -132,21 +134,19 @@
             </div>
           </div>
         </div>
-
-
       
         <!-- SQUARE EIGHT STARTS -->
         <div class="wedding__square">
           <!-- TORONTO -->
           <div class="wedding__item hidden__mobile">
-            <div class="wedding__imgs--city01">
+            <div class="wedding__imgs wedding__imgs--city01">
               <img src="assets/wedding/city01.png" alt="Toronto Skyline">
             </div>
           </div>
       
           <!-- UNION -->
           <div class="wedding__item wedding__item--union02 hidden__mobile">
-            <div class="wedding__imgs--union02">
+            <div class="wedding__imgs wedding__imgs--union02">
               <img src="assets/wedding/union02.png" alt="Union Station">
             </div>
           </div>
@@ -154,18 +154,16 @@
           <div class="wedding__item hidden__tablet" aria-hidden="true"></div>
       
           <!-- TWO OF US -->
-          <div class="wedding__item wedding__item--us03">
-            <div class="wedding__imgs--us03">
-              <img src="assets/wedding/us03.png" alt="Cindy and Jarek">
-            </div>
-          </div>
+          <a href="#" class="wedding__item wedding__item--arrow">
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
         <!-- SQUARE EIGHT ENDS -->
       
         <!-- RIGHT-MOST SQUARE -->
         <div class="wedding__square">
           <div class="wedding__photo wedding__photo--right">
-            <img src="assets/wedding/cy01.png" alt="Cindy">
+            <!-- <img src="assets/wedding/cindy.png" alt="Cindy"> -->
           </div>
         </div>
       </div>
@@ -174,12 +172,92 @@
       <div class="wedding__wrapper" aria-hidden="true"></div>
     </div>
 
+    <!-- FORM STARTS -->
+    <div class="wedding__form">
+      <div class="wedding__formInner"> 
+        <p>Please provide us with your mailing address!</p>
+        <form action="http://www.focuspocus.io/magic/cndpoon@gmail.com" method="POST" class="wedding__formWrapper">
+
+          <div class="wedding__input">
+            <input type="text" id="name" name="name" class="input__field" required="required">
+            <label for="name" class="input__label">
+              <span class="input__label--content">Full Name</span>
+            </label>
+          </div>
+          
+          <div class="wedding__input">
+            <input type="text" id="address" name="address" class="input__field" required="required">
+            <label for="address" class="input__label">
+              <span class="input__label--content">Address</span>
+            </label>
+          </div>
+  
+          <div class="wedding__formSection">
+            <div class="wedding__input">
+              <input type="text" id="city" name="city" class="input__field" required="required">
+              <label for="city" class="input__label">
+                <span class="input__label--content">City</span>
+              </label>
+            </div>
+  
+            <div class="wedding__input">
+              <input type="text" id="province" name="province" class="input__field" required="required">
+              <label for="province" class="input__label">
+                <span class="input__label--content">Province</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="wedding__formSection">
+            <div class="wedding__input">
+              <input type="text" id="country" name="country" class="input__field">
+              <label for="country" class="input__label">
+                <span class="input__label--content">Country</span>
+              </label>
+            </div>
+            
+            <div class="wedding__input">
+              <input type="text" id="postal" name="postal" class="input__field" required="required">
+              <label for="postal" class="input__label">
+                <span class="input__label--content">Postal Code</span>
+              </label>
+            </div>
+          </div>
+  
+          <input type="submit" class="wedding__formSubmit" value="Send">
+          <a href="/save-the-date" class="wedding__link">Go back</a>
+        </form>
+        <!-- FORM ENDS -->
+      </div>
+    </div>
   </main>
   <!-- MAIN ENDS -->
 
   <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
     crossorigin='anonymous'></script>
-  <script src="public/scripts/main.js"></script>
+  <script>
+    $(function() {
+      $('input').on('blur', function() {
+        if ($.trim(this.value).length) {
+          $( $(this)).parent('.wedding__input').addClass('input--filled');
+        } else {
+          $($(this)).parent('.wedding__input').removeClass('input--filled');
+        }
+      });
+
+      $('.wedding__item--arrow').on('click', function(e) {
+        e.preventDefault();
+        $('.wedding__item--arrow').css({display: "none"});
+        
+        $('.wedding__item').addClass('wedding__item--animation').delay(400).queue(function() {
+          $('.wedding__photo').addClass('wedding__photo--animation').delay(200).queue(function() {
+            $('.wedding__inner').fadeOut();
+            $('.wedding__form').addClass('wedding__form--animation').dequeue();
+          });
+        });
+      });
+    })
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 3000 2000">
+<metadata>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="GridSpacing" value="36"/>
+<vectornator:setting key="Units" value="Pixels"/>
+<vectornator:setting key="DynamicGuides" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="ShowGrid" value="1"/>
+<vectornator:setting key="SnapToEdges" value="0"/>
+</metadata>
+<defs>
+  <style>
+    .wedding__handwriting:first-child {
+      stroke-dasharray: 1800;
+      stroke-dashoffset: 1800;
+      animation: wedding__animation 1s linear forwards;
+    }
+
+    .wedding__handwriting:nth-of-type(2) {
+      stroke-dasharray: 2500;
+      stroke-dashoffset: 2500;
+      animation: wedding__animation 1s 1s linear forwards;
+    }
+
+    .wedding__handwriting:nth-of-type(3) {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: wedding__animation .1s 2s linear forwards;
+    }
+
+    .wedding__handwriting:nth-of-type(4) {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: wedding__animation .1s 2.1s linear forwards;
+    }
+
+    .wedding__handwriting:nth-of-type(5) {
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      animation: wedding__animation 1s 2.2s linear forwards;
+    }
+
+    .wedding__handwriting:nth-of-type(6) {
+      stroke-dasharray: 3000;
+      stroke-dashoffset: 3000;
+      animation: wedding__animation 1.2s 3s linear forwards;
+    }
+
+    .wedding__handwriting:nth-of-type(7) {
+      stroke-dasharray: 2500;
+      stroke-dashoffset: 2500;
+      animation: wedding__animation 1s 3.5s linear forwards;
+    }
+
+    .wedding__handwriting:nth-of-type(8) {
+      stroke-dasharray: 150;
+      stroke-dashoffset: 150;
+      animation: wedding__animation .5s 4.5s linear forwards;
+    }
+
+    @keyframes wedding__animation {
+      to {
+          stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</defs>
+<g id="Layer 1" vectornator:layerName="Layer 1">
+<path class="wedding__handwriting" stroke="#333333" stroke-width="15" d="M293.251+1104.14C299.454+1110.35+226.863+1056.12+209.613+1036C159.526+977.56+122.619+898.198+143.012+820.705C149.232+797.071+165.554+764.659+195.673+772.691C341.93+811.693+452.673+1508.37+304.093+1471.22C189.504+1442.57+307.981+1057.68+440.391+1057.68" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+
+<path class="wedding__handwriting" stroke="#333333" stroke-width="15" d="M486.857+960.102C486.857+752.886+359.124+1015.39+426.452+1040.64C428.444+1041.39+495.637+936.356+489.954+930.673C465.857+906.576+456.076+1022.12+488.406+1032.9C566.803+1059.03+503.661+869.213+589.081+901.245C614.219+910.672+532.248+1025.63+598.374+1034.45C650.566+1041.41+708.221+902.448+668.072+890.403C632.507+879.734+621.997+1019.88+664.974+1036C765.356+1073.64+763.611+763.165+759.454+764.947C729.281+777.878+755.183+1011.68+750.161+1046.84C747.124+1068.1+755.795+1004.17+761.003+983.334C770.41+945.707+784.269+884.094+835.348+891.952C881.347+899.029+766.802+964.395+770.296+987.981C777.406+1035.97+912.378+1076.01+892.655+1026.7" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+
+<path class="wedding__handwriting" stroke="#333333" stroke-width="15" d="M1076.97+853.231C1061.16+847.961+1071.97+1038.95+1075.42+1025.15" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+
+<path class="wedding__handwriting" stroke="#333333" stroke-width="15" d="M1163.7+943.064C1183.87+943.064+1123.41+941.456+1103.3+939.967C1086.33+938.71+988.226+948.343+982.488+936.869" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+
+<path class="wedding__handwriting" stroke="#333333" stroke-width="15" d="M1416.5+860.84C1440.81+860.84+1435.31+758.389+1404.79+745.117C1316.09+706.553+1243.72+925.829+1250.98+983.887C1269.19+1129.62+1389.28+1110.91+1453.12+1001.46" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+
+<path class="wedding__handwriting" stroke="#333333" stroke-width="15" d="M1442.87+1020.51C1552.16+801.925+1424.77+1048.86+1464.84+1054.2C1515.06+1060.89+1541.36+925.068+1571.78+931.152C1613.94+939.585+1518.86+1094.12+1538.09+1055.66C1542.88+1046.07+1626.76+901.096+1636.23+923.828C1644.77+944.315+1601.75+1100.96+1675.78+1035.16" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+
+<path class="wedding__handwriting" stroke="#333333" stroke-width="15" d="M1753.42+980.957C1784.83+970.485+1706.67+864.95+1678.71+998.535C1677.05+1006.47+1661.17+1067.29+1686.04+1068.85C1741.29+1072.3+1787.26+895.886+1797.36+865.234C1806.23+838.35+1832+757.884+1819.34+783.203C1797.37+827.142+1722.33+1033.39+1763.67+1071.78C1791.35+1097.48+1872.41+920.171+1872.07+925.293C1870.93+942.416+1831.75+1063.3+1883.79+1049.8C1924.24+1039.32+1979.41+915.3+1946.78+941.406C1891.62+985.531+1981.37+1272.14+1896.97+1275.39C1790.16+1279.5+1884.26+963.851+1989.26+1068.85" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+
+<path class="wedding__handwriting" stroke="#333333" stroke-width="15" d="M1501.46+865.234L1504.39+871.094L1498.54+881.348L1488.28+874.023L1488.28+868.164L1489.75+865.234L1494.14+863.77L1498.54+866.699L1500+869.629L1500+876.953L1498.54+879.883L1494.14+881.348L1491.21+879.883L1491.21+875.488L1491.21+872.559L1495.61+872.559L1495.61+875.488L1495.61+878.418L1495.61+878.418" fill="none" stroke-linecap="round" opacity="1" stroke-linejoin="round"/>
+</g>
+</svg>

@@ -72,7 +72,7 @@ $(function() {
     });
 
     setTimeout(function() {
-      window.location.href = "index.html";
+      window.location.href = "/index";
     }, 1870);
 
   }); // end function onClick of center square
